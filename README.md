@@ -11,7 +11,7 @@ Steps followed:
 
 6.  Create AWS account.
 7.  Create S3 bucket to store the files.
-8.  Upload input files and JAR file created in step 5 to s3 bucket.
+8.  Upload input files(10 copies) and JAR file created in step 5 to s3 bucket.
 9.  Create EC2 key pair. 
 10. Create cluster in EMR. Choose path of s3 bucket created in previous step. Choose the EMR release.
     In applications check Core hadoop option. Make sure the hadoop versions here and the one in pom.xml are same.
