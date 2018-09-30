@@ -7,7 +7,10 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
  
-//Mapper class
+/**
+* Mapper class for Distributed Cache. 
+* Maps each word in input files.
+*/
 public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable>{
 	public void map(LongWritable key, Text value, Context con) throws IOException, InterruptedException {
 		String allLines = value.toString();
