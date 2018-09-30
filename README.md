@@ -1,6 +1,7 @@
 # Hadoop-mapreduce-on-AWS
 
 Steps followed:
+
 1.  Create Maven project in eclipse.
 2.  Update dependencied in pom.xml. This will include all the JAR files required for the project.
     In this case, hadoop-client libraries are needed.
@@ -20,4 +21,10 @@ Steps followed:
 14. Go to steps tab. Click on Add step. In JAR location, enter the s3 path of the JAR file. In arguments box, enter the           arguments like s3 path of input files, output directory. Click on Add.
 15. Monitor the status and can view the output files in s3 once status changes from Running to Completed.
 
+
+Tasks completed:
+
+1.  Counting the number of occurences of each word.
+2.  Counting the number of occurences of 2 adjacent words.
+3.  In input files, count the number of occurences of every word which are present in other file(word-patterns.txt in this         case). This is done using Distributed caching feature of hadoop. 
    
