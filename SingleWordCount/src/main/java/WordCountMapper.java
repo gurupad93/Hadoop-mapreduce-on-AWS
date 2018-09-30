@@ -8,7 +8,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
  
 /**
-* Mapper class for Distributed Cache. 
+* Mapper class.
 * Maps each word in input files.
 */
 public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable>{
