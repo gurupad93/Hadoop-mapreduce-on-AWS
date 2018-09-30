@@ -50,7 +50,10 @@ public class DistributedCacheHadoop {
 		}
 	
 	
-		//Mapper class for Distributed Cache
+		/**
+		* Mapper class for Distributed Cache. 
+		* Maps each word which is present in word-patterns.txt
+		*/
 		public static class DistributedCacheMapper extends Mapper<LongWritable, Text, Text, IntWritable>{
 			public void map(LongWritable key, Text value, Context con) throws IOException, InterruptedException {
 					String line = value.toString();
@@ -72,7 +75,10 @@ public class DistributedCacheHadoop {
 		}
 	
 		
-		//Reducer class for Distributed cache
+		/**
+		* Reducer class for Distributed cache
+		* calculates the sum for each of the words.
+		*/
 		public static class DistributedCacheReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 				public void reduce(Text word, Iterable<IntWritable> values, Context con) throws IOException, InterruptedException {
 						int sumOfValues = 0;
