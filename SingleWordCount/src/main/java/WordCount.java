@@ -22,7 +22,7 @@ public class WordCount extends Configured implements Tool {
 	//run function
 	public int run(String[] args) throws Exception {
 		if (args.length != 2) {
-			System.err.printf("Usage: %s <general options> <i/p> <o/p>\n",
+			System.err.printf("usage: %s <general options> <i/p> <o/p>\n",
 					getClass().getSimpleName());
 			ToolRunner.printGenericCommandUsage(System.err);
 			return -1;
