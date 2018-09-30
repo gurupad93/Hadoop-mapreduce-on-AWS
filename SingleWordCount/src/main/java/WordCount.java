@@ -33,16 +33,22 @@ public class WordCount extends Configured implements Tool {
 		job.setJarByClass(WordCount.class); //Main class
 		job.setJobName("WordCounter");
 		
-		FileInputFormat.addInputPath(job, new Path(args[0])); //Input files
-		FileOutputFormat.setOutputPath(job, new Path(args[1]));//Output
-	
+		//Configure Input and Output directories.
+		FileInputFormat.addInputPath(job, new Path(args[0])); 
+		FileOutputFormat.setOutputPath(job, new Path(args[1]));
+		
+		//Setting the expected types of output.
 		job.setOutputKeyClass(Text.class);
 		job.setOutputValueClass(IntWritable.class);
 		job.setOutputFormatClass(TextOutputFormat.class);
-		job.setMapperClass(WordCountMapper.class); //Mapper class
-		job.setReducerClass(WordCountReducer.class);//Reducer class
-	
-		int returnValue = job.waitForCompletion(true) ? 0:1; //start the job
+		
+		//Configure Mapper class
+		job.setMapperClass(WordCountMapper.class); 
+		//Configure Reducer class
+		job.setReducerClass(WordCountReducer.class);
+		
+		//Start the job
+		int returnValue = job.waitForCompletion(true) ? 0:1; 
 		return returnValue;
 	}
 }
