@@ -37,7 +37,10 @@ public class DoubleWordCount {
 		System.exit(j.waitForCompletion(true)?0:1); //Starting the job
 	}
 	
-	//Mapper class for double word count
+	/**
+	* Mapper class for Distributed Cache. 
+	* Maps 2 adjacent words separated by spaces.
+	*/
 	public static class MapForWordCount extends Mapper<LongWritable, Text, Text, IntWritable>{
 		public void map(LongWritable key, Text value, Context con) throws IOException, InterruptedException {
 			String allLines = value.toString();// All lines from input files
@@ -68,7 +71,9 @@ public class DoubleWordCount {
 			}
 		}
 	}
-	//Reducer class for Double Word Count
+	/**
+	* Reducer class for Double Word Count
+	*/
 	public static class ReduceForWordCount extends Reducer<Text, IntWritable, Text, IntWritable> {
 		public void reduce(Text word, Iterable<IntWritable> values, Context con) throws IOException, InterruptedException {
 			int sumOfValues = 0;
