@@ -22,7 +22,7 @@ Steps followed:
 15. Monitor the status and can view the output files in s3 once status changes from Running to Completed.
 
 
-Tasks completed:
+Tasks Implemented:
 
 1.  Counting the number of occurences of each word.
 2.  Counting the number of occurences of 2 adjacent words.
