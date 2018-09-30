@@ -20,6 +20,7 @@ Steps followed:
 13. It takes some time to setup the instances. Wait till the Running status are shown for Master and Core nodes.
 14. Go to steps tab. Click on Add step. In JAR location, enter the s3 path of the JAR file. In arguments box, enter the           arguments like s3 path of input files, output directory. Click on Add.
 15. Monitor the status and can view the output files in s3 once status changes from Running to Completed.
+16. Terminate the instances once the run is complete.
 
 
 Tasks Implemented:
